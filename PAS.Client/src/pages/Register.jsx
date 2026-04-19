@@ -5,7 +5,7 @@ export default function Register() {
   const navigate = useNavigate();
   const [colorIndex, setColorIndex] = useState(0);
 
-  // 1. THE DATA STATE: Holds everything the user types
+  // 1. THE DATA STATE:This Holds everything the user types
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
