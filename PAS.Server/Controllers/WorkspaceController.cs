@@ -47,7 +47,7 @@ namespace PAS.Server.Controllers
 
             return Ok(new
             {
-                githubRepoUrl = project.GitHubRepoUrl,
+                //githubRepoUrl = project.GitHubRepoUrl,
                 tasks = project.Tasks.OrderBy(t => t.StartDate).ToList(),
                 
                 // 🌟 THE FIX: Safely checking if c.User is null before grabbing the Name and Role
@@ -87,7 +87,7 @@ namespace PAS.Server.Controllers
             var project = _context.Projects.Find(projectId);
             if (project != null)
             {
-                project.GitHubRepoUrl = url;
+                //project.GitHubRepoUrl = url;
                 _context.SaveChanges();
             }
             return Ok();
