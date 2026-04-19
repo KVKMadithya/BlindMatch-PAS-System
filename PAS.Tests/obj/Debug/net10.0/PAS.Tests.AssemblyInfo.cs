@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PAS.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0727fd005cf0d51f1c4b9b0982b721c21d8a8597")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92f3dce9005109f2c34edebeb9dc35c9046231d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("PAS.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PAS.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

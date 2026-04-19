@@ -27,7 +27,7 @@ export default function ManageUsers() {
 
   useEffect(() => { fetchUsers(); }, []);
 
-  // 🔍 THE LIVE SEARCH FILTER
+  // 🔍 THIS IS LIVE SEARCH FILTER
   const filteredUsers = users.filter(user => 
     user.fullName.toLowerCase().includes((searchQuery || '').toLowerCase()) ||
     user.email.toLowerCase().includes((searchQuery || '').toLowerCase())
