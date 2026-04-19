@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PAS.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5289e881976b8463d0df564bc586c596850a40b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0727fd005cf0d51f1c4b9b0982b721c21d8a8597")]
 [assembly: System.Reflection.AssemblyProductAttribute("PAS.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PAS.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
