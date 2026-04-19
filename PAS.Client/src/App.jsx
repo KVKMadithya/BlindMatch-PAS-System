@@ -1,121 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import DashboardLayout from './components/DashboardLayout';
+import Dashboard from './pages/Dashboard';
+import PostProject from './pages/PostProject';
+import ProjectFeed from './pages/ProjectFeed';
+import UserProfile from './pages/UserProfile';
+import ManageUsers from './pages/ManageUsers';
+import ReportIssue from './pages/ReportIssue';
+import ViewReports from './pages/ViewReports';
+import Mailbox from './pages/Mailbox';
+import ProjectWorkspace from './pages/ProjectWorkspace';
+import SupervisorCommand from './pages/SupervisorCommand';
+import ModuleLeaderGrading from './pages/ModuleLeaderGrading';
+import ProjectResults from './pages/ProjectResults';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    // We wrap everything in BrowserRouter so React knows how to change pages!
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        
+        {/* EVERYTHING INSIDE HERE USES THE DASHBOARD LAYOUT */}
+        <Route element={<DashboardLayout />}>
+          {/* The 'index' means this loads exactly at /dashboard */}
+          <Route path="/dashboard" index element={<Dashboard />} />
+          {/* This loads at /dashboard/post-project */}
+          <Route path="/dashboard/post-project" element={<PostProject />} />
+          <Route path="/dashboard/feed" element={<ProjectFeed />} />
+          <Route path="/dashboard/profile" element={<UserProfile />} />
+          <Route path="/dashboard/manage-users" element={<ManageUsers />} />
+          <Route path="/dashboard/report-issue" element={<ReportIssue />} />
+          <Route path="/dashboard/reports" element={<ViewReports />} />
+          <Route path="/dashboard/mail" element={<Mailbox />} />
+          <Route path="/dashboard/workspace" element={<ProjectWorkspace />} />
+          <Route path="/dashboard/command" element={<SupervisorCommand />} />
+          <Route path="/dashboard/grading" element={<ModuleLeaderGrading />} />
+          <Route path="/dashboard/results/:projectId" element={<ProjectResults />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
