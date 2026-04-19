@@ -16,7 +16,7 @@ export default function SupervisorCommand() {
         if (res.ok) {
           const data = await res.json();
           setProjects(data);
-          if (data.length > 0) setSelectedProject(data[0]); // Auto-select the first one
+          if (data.length > 0) setSelectedProject(data[0]); // It Auto-selects the first one
         }
       } catch (error) {
         showToast("Failed to load supervised projects.", "error");

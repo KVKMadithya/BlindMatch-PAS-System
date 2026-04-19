@@ -3164,23 +3164,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\IT\\.nuget\\packages\\": {},
+    "C:\\Users\\Imanya Jithmi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IT\\Documents\\DevProjects\\BlindMatch_PAS\\PAS.Server\\PAS.Server.csproj",
+      "projectUniqueName": "C:\\Users\\Imanya Jithmi\\Desktop\\BlindMatch-PAS-System\\PAS.Server\\PAS.Server.csproj",
       "projectName": "PAS.Server",
-      "projectPath": "C:\\Users\\IT\\Documents\\DevProjects\\BlindMatch_PAS\\PAS.Server\\PAS.Server.csproj",
-      "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IT\\Documents\\DevProjects\\BlindMatch_PAS\\PAS.Server\\obj\\",
+      "projectPath": "C:\\Users\\Imanya Jithmi\\Desktop\\BlindMatch-PAS-System\\PAS.Server\\PAS.Server.csproj",
+      "packagesPath": "C:\\Users\\Imanya Jithmi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Imanya Jithmi\\Desktop\\BlindMatch-PAS-System\\PAS.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Imanya Jithmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
