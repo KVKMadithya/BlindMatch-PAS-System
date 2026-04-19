@@ -145,7 +145,7 @@ export default function UserProfile() {
     }
   };
 
-  // PROFILE PICTURE UPLOAD FUNCTION
+  // THIS IS THE PROFILE PICTURE UPLOAD FUNCTION
   const handlePhotoUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
