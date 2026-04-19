@@ -181,7 +181,7 @@ export default function PostProject() {
           </div>
         </div>
 
-        {/* SECTION 2: Live Team Invites */}
+        {/* SECTION 2: The Live Team Invites */}
         <div className={`p-8 rounded-[2rem] border shadow-lg transition-colors ${theme.card}`}>
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-bold flex items-center gap-3">
