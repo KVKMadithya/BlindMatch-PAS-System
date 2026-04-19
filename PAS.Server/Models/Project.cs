@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic; // Added this!
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,16 +10,17 @@ namespace PAS.Server.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        [MaxLength(200)]
+        [Required(ErrorMessage = "Project Title is required.")]
+        [StringLength(200, MinimumLength = 5, ErrorMessage = "Title must be between 5 and 200 characters.")]
+        [RegularExpression(@"^[a-zA-Z0-9\s\-_:\.]+$", ErrorMessage = "Title contains invalid special characters.")]
         public string Title { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "Project Description is required.")]
         public string Description { get; set; } = string.Empty;
 
         [Required]
         [MaxLength(100)]
-        public string Faculty { get; set; } = string.Empty; // <-- ADDED THIS!
+        public string Faculty { get; set; } = string.Empty;
 
         [Required]
         [MaxLength(20)]
@@ -28,10 +29,12 @@ namespace PAS.Server.Models
         public DateTime? Deadline { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        // <-- ADDED THIS LIST TO HOLD YOUR TEAM MEMBERS! -->
+        // ---------------------------------------------------
+        // RELATIONS & TEAM MEMBERS
+        // ---------------------------------------------------
+        
         public ICollection<ProjectMember> Members { get; set; } = new List<ProjectMember>();
 
-        // Relations
         public int CreatedById { get; set; }
         [ForeignKey("CreatedById")]
         public AppUser? CreatedBy { get; set; }
@@ -40,16 +43,21 @@ namespace PAS.Server.Models
         [ForeignKey("SupervisorId")]
         public AppUser? Supervisor { get; set; }
 
-        // Add this inside the Project class
+        // ---------------------------------------------------
+        // GRADING & EXTERNAL LINKS
+        // ---------------------------------------------------
+        
         public int? Marks { get; set; }
 
-        // Add this under your other properties
-        public string? GitHubRepoUrl { get; set; }
+        [Url(ErrorMessage = "Must be a valid URL format.")]
+        [MaxLength(500)]
+        //public string? GitHubRepoUrl { get; set; }
 
-        // Add these to link the new tables
+        // ---------------------------------------------------
+        // WORKSPACE MODULES
+        // ---------------------------------------------------
+        
         public ICollection<GanttTask> Tasks { get; set; } = new List<GanttTask>();
         public ICollection<ProjectComment> Comments { get; set; } = new List<ProjectComment>();
-
-        
     }
 }
