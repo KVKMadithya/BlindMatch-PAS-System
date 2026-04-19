@@ -14,7 +14,7 @@ export default function Dashboard() {
   
   const [isLoading, setIsLoading] = useState(true);
   
-  // 🔘 Modal States
+  // 🔘These are Modal States
   const [projectToDelete, setProjectToDelete] = useState(null);
   const [projectToComplete, setProjectToComplete] = useState(null);
 
